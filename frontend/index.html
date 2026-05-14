@@ -14,24 +14,24 @@
         document.documentElement.classList.add('dark');
       }
     })();
+  </script>
 
-    // 2. Tailwind 설정: CDN 로드 전 선언
-    tailwind = {
-      config: {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
-            },
+  <!-- 2. Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 3. Tailwind 설정: CDN 로드 후 선언해야 darkMode: 'class'가 적용됨 -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
           },
         },
       },
     };
   </script>
-
-  <!-- 3. Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="min-h-screen bg-gray-100 dark:bg-gray-950 font-sans transition-colors duration-300">
