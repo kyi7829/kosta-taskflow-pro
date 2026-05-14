@@ -4,3 +4,4 @@ sqlalchemy==2.0.41
 pytest==8.3.5
 httpx==0.28.1
 aiofiles==24.1.0
+pytest-playwright==0.7.0
